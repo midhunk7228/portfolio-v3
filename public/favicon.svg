@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" fill="#050508"/>
+  <rect x="20" y="20" width="60" height="60" fill="none" stroke="#2E31FF" stroke-width="3"/>
+  <text x="50" y="55" font-family="monospace" font-size="40" font-weight="bold" fill="#2E31FF" text-anchor="middle" dominant-baseline="central">MK</text>
+  <circle cx="50" cy="75" r="3" fill="#2E31FF"/>
+</svg>
