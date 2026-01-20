@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Midhun K | Engineering Portfolio V2</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Fira+Code:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2525f4",
+                        "electric-blue": "#2E31FF",
+                        "background-dark": "#050508",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+            display: flex;
+            width: max-content;
+            animation: scroll 30s linear infinite;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-auto-rows: minmax(120px, auto);
+            gap: 16px;
+        }
+        .glitch-wrapper {
+            position: relative;
+        }
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
+            animation: glitch-anim2 1s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            20% { clip: rect(62px, 9999px, 42px, 0); }
+            40% { clip: rect(15px, 9999px, 81px, 0); }
+            60% { clip: rect(78px, 9999px, 19px, 0); }
+            80% { clip: rect(44px, 9999px, 56px, 0); }
+            100% { clip: rect(9px, 9999px, 32px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(40px, 9999px, 20px, 0); }
+            40% { clip: rect(80px, 9999px, 90px, 0); }
+            60% { clip: rect(10px, 9999px, 30px, 0); }
+            80% { clip: rect(50px, 9999px, 70px, 0); }
+            100% { clip: rect(20px, 9999px, 40px, 0); }
+        }
+        .x-ray-card:hover .x-ray-content {
+            opacity: 1;
+        }
+        .x-ray-content {
+            opacity: 0;
+            transition: opacity 0.3s steps(4);
+            background-image: linear-gradient(rgba(46, 49, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(46, 49, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #050508; }
+        ::-webkit-scrollbar-thumb { background: #2E31FF; }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-white selection:bg-electric-blue selection:text-white overflow-x-hidden">
+<div class="w-full bg-electric-blue py-2 border-b-2 border-white/20 overflow-hidden sticky top-0 z-50">
+<div class="animate-scroll whitespace-nowrap flex items-center">
+<span class="text-xs font-bold tracking-[0.3em] px-8 uppercase">SENIOR FRONTEND / FULL-STACK ENGINEER — REACT.JS EXPERT — NEXT.JS ARCHITECT — NODE.JS BACKEND — TYPESCRIPT MASTER — SYSTEM VERSION: 2.0.1 — </span>
+<span class="text-xs font-bold tracking-[0.3em] px-8 uppercase">SENIOR FRONTEND / FULL-STACK ENGINEER — REACT.JS EXPERT — NEXT.JS ARCHITECT — NODE.JS BACKEND — TYPESCRIPT MASTER — SYSTEM VERSION: 2.0.1 — </span>
+</div>
+</div>
+<header class="flex items-center justify-between border-b border-white/10 px-6 py-6 bg-background-dark/80 backdrop-blur-md sticky top-[33px] z-40">
+<div class="flex items-center gap-4">
+<div class="size-10 flex items-center justify-center bg-electric-blue border-2 border-white/20">
+<span class="material-symbols-outlined text-white text-xl">terminal</span>
+</div>
+<h2 class="text-xl font-bold tracking-tighter uppercase font-mono">MIDHUN.K // DEV</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-xs font-bold hover:text-electric-blue transition-colors uppercase tracking-widest" href="#skills">Capabilities</a>
+<a class="text-xs font-bold hover:text-electric-blue transition-colors uppercase tracking-widest" href="#experience">History</a>
+<a class="text-xs font-bold hover:text-electric-blue transition-colors uppercase tracking-widest" href="#projects">Deployments</a>
+<a class="text-xs font-bold hover:text-electric-blue transition-colors uppercase tracking-widest" href="#contact">Terminal</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex items-center justify-center border-2 border-electric-blue h-10 px-6 bg-transparent text-white text-xs font-bold uppercase tracking-widest hover:bg-electric-blue transition-all">
+            SSH Connect
+        </button>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-6 py-12">
+<div class="mb-20">
+<div class="glitch-wrapper">
+<h1 class="glitch-text text-[clamp(4rem,15vw,12rem)] font-bold leading-[0.8] tracking-tighter uppercase mb-6" data-text="MIDHUN K">
+                MIDHUN K
+            </h1>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end border-t-4 border-electric-blue pt-6 gap-6">
+<p class="max-w-xl text-gray-400 text-xl font-medium leading-relaxed">
+                Architecting high-performance, scalable web applications with <span class="text-white">React, TypeScript, and Node.js</span>. Delivering production-grade solutions for complex enterprise ecosystems.
+            </p>
+<div class="text-right font-mono">
+<span class="block text-electric-blue font-bold">STATUS: DEPLOYING_CODE</span>
+<span class="text-[10px] text-gray-500 uppercase tracking-[0.2em]">Based in Calicut, Kerala, IN</span>
+</div>
+</div>
+</div>
+<div class="bento-grid">
+<div class="col-span-12 md:col-span-8 row-span-4 bg-zinc-900 border-2 border-white/10 p-8 relative overflow-hidden group" id="skills">
+<div class="absolute top-0 right-0 p-4 font-mono text-[10px] text-electric-blue opacity-50">SKILL_MATRIX_V2</div>
+<h3 class="text-5xl font-bold uppercase mb-12 tracking-tighter">Technical<br/><span class="text-electric-blue">Capabilities</span></h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="p-6 border-2 border-white/5 hover:border-electric-blue transition-all group/icon cursor-crosshair">
+<div class="size-12 mb-4 flex items-center justify-center bg-white/5 group-hover/icon:bg-electric-blue transition-colors">
+<span class="material-symbols-outlined text-3xl">javascript</span>
+</div>
+<span class="block font-bold uppercase text-xs tracking-widest">React.js</span>
+<span class="text-[10px] text-gray-500 font-mono">FRAMEWORK</span>
+</div>
+<div class="p-6 border-2 border-white/5 hover:border-electric-blue transition-all group/icon cursor-crosshair">
+<div class="size-12 mb-4 flex items-center justify-center bg-white/5 group-hover/icon:bg-electric-blue transition-colors">
+<span class="material-symbols-outlined text-3xl">data_object</span>
+</div>
+<span class="block font-bold uppercase text-xs tracking-widest">TypeScript</span>
+<span class="text-[10px] text-gray-500 font-mono">TYPING</span>
+</div>
+<div class="p-6 border-2 border-white/5 hover:border-electric-blue transition-all group/icon cursor-crosshair">
+<div class="size-12 mb-4 flex items-center justify-center bg-white/5 group-hover/icon:bg-electric-blue transition-colors">
+<span class="material-symbols-outlined text-3xl">dynamic_feed</span>
+</div>
+<span class="block font-bold uppercase text-xs tracking-widest">Next.js</span>
+<span class="text-[10px] text-gray-500 font-mono">SSR/SSG</span>
+</div>
+<div class="p-6 border-2 border-white/5 hover:border-electric-blue transition-all group/icon cursor-crosshair">
+<div class="size-12 mb-4 flex items-center justify-center bg-white/5 group-hover/icon:bg-electric-blue transition-colors">
+<span class="material-symbols-outlined text-3xl">settings_ethernet</span>
+</div>
+<span class="block font-bold uppercase text-xs tracking-widest">Node.js</span>
+<span class="text-[10px] text-gray-500 font-mono">RUNTIME</span>
+</div>
+</div>
+<div class="mt-12 flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-white/5 text-[10px] font-bold uppercase tracking-widest border border-white/10">Redux Toolkit</span>
+<span class="px-3 py-1 bg-white/5 text-[10px] font-bold uppercase tracking-widest border border-white/10">Supabase</span>
+<span class="px-3 py-1 bg-white/5 text-[10px] font-bold uppercase tracking-widest border border-white/10">AWS EC2</span>
+<span class="px-3 py-1 bg-white/5 text-[10px] font-bold uppercase tracking-widest border border-white/10">GraphQL</span>
+<span class="px-3 py-1 bg-white/5 text-[10px] font-bold uppercase tracking-widest border border-white/10">Docker</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 row-span-4 bg-black border-2 border-electric-blue/50 p-6 font-mono overflow-hidden flex flex-col">
+<div class="flex items-center gap-2 mb-4 border-b border-white/10 pb-2">
+<div class="size-2 rounded-full bg-red-500"></div>
+<div class="size-2 rounded-full bg-yellow-500"></div>
+<div class="size-2 rounded-full bg-green-500"></div>
+<span class="text-[10px] ml-2 text-gray-500 uppercase">root@midhun-k:~</span>
+</div>
+<div class="text-xs space-y-3 leading-relaxed">
+<div class="text-electric-blue">&gt; cat summary.txt</div>
+<div class="text-gray-300">
+                    Results-driven Senior Frontend Engineer with 4+ years of hands-on experience in developing scalable, production-grade web applications.
+                </div>
+<div class="text-gray-300">
+                    Demonstrated expertise in modern frontend architecture, performance optimization, responsive design, and seamless backend integration.
+                </div>
+<div class="text-electric-blue">&gt; ls /experience</div>
+<div class="text-white">
+                    - Ethgen_Technologies<br/>
+                    - Acodez_IT_Solutions<br/>
+                    - Maxlore_Innovations
+                </div>
+<div class="flex items-center gap-1">
+<span class="text-electric-blue">&gt;</span>
+<span class="w-2 h-4 bg-electric-blue animate-pulse"></span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 row-span-4 x-ray-card relative bg-zinc-900 border-2 border-white/10 overflow-hidden group cursor-pointer" id="projects">
+<div class="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://lh3.googleusercontent.com/aida-public/AB6AXuClrYxh_OR5dlhE3qnFA8Wi98HaSoOOomEgjvvz_y8bRGFWX3V-iHZV1muiUsrPdlHxR4You7KGUKv6XGqThWukBJgpukPW_WJOGauFLW2LpHahf6P_SUKU2Cj7Ca8_YDfoIWdUmvwD5l-0OE9MrRTHVEKUpv_JTDUmFc74XfJW4Lu5YO7c_dPSoUeF51HqZQ58NBynZvBmfRvIFMrEy4JbQmxTsPvyo4bMI-0AfH9zpOWlglE_Mk0BIjlhBsF0ICQqWOlAyVOIScA');"></div>
+<div class="x-ray-content absolute inset-0 z-10 flex flex-col p-8 font-mono text-[10px] text-electric-blue overflow-hidden pointer-events-none">
+<div class="mb-4">const calculatePayroll = (data) =&gt; {</div>
+<div class="ml-4">const tax = data.salary * 0.15;</div>
+<div class="ml-4">return data.salary - tax + data.bonus;</div>
+<div>};</div>
+<div class="mt-4">export default function PayrollEngine() { ... }</div>
+<div class="mt-4"></div>
+</div>
+<div class="absolute top-4 left-4 bg-electric-blue text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest z-20">Production</div>
+<div class="absolute bottom-8 left-8 z-20">
+<h4 class="text-6xl font-bold uppercase tracking-tighter mb-2">Exhpay</h4>
+<p class="text-gray-300 max-w-sm font-medium">Enterprise Payroll Management Platform with automated tax calculation and regulatory compliance reporting.</p>
+</div>
+<div class="absolute bottom-8 right-8 z-20 opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0">
+<span class="material-symbols-outlined text-4xl text-electric-blue">open_in_new</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 row-span-4 x-ray-card relative bg-zinc-900 border-2 border-white/10 overflow-hidden group cursor-pointer">
+<div class="absolute inset-0 grayscale group-hover:grayscale-0 transition-all duration-700 bg-cover bg-center" style="background-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCfuYVGMNUqsn0VSUt519oN3Bk7HC4AnS5oxe-LDqdicF2SJxYF5OrX2tUKl-QCjMmjAjX_4Ah-MpdgyBeShIS1NAp3BawUX1ih5RUXO7ajWyNgl8xlGk9Bc2WfQ58JlXBOsRo46pH4l8iIphFH_lyTeJD9k1Jtu5trQmj524dHSkxpsvhHzBJrnCAdqTudsMmz5BGHWIOVrovN4JCf-LoI4FFXJtl09CGYXnjZmfkLXOY1AUoFCTN3zQ4q3GKgCKVahE3JV5o-JI4');"></div>
+<div class="x-ray-content absolute inset-0 z-10 flex flex-col p-8 font-mono text-[10px] text-electric-blue overflow-hidden pointer-events-none">
+<div class="mb-4">import { useProjectTracker } from '@/hooks/brickly';</div>
+<div class="ml-4">const [resources, setResources] = useState([]);</div>
+<div class="ml-4">useEffect(() =&gt; fetchRealtimeData(), []);</div>
+<div class="mt-4"><div>&lt;ConstructionDashboard&gt;</div></div>
+<div class="ml-4"><div>&lt;GanttChart data={projects} /&gt;</div></div>
+<div><div>&lt;/ConstructionDashboard&gt;</div></div>
+</div>
+<div class="absolute top-4 left-4 bg-white text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest z-20">SaaS App</div>
+<div class="absolute bottom-8 left-8 z-20">
+<h4 class="text-6xl font-bold uppercase tracking-tighter mb-2 italic">Brickly</h4>
+<p class="text-gray-300 max-w-sm font-medium">Full-cycle Construction Project Management system featuring cost tracking, resource allocation, and real-time reporting.</p>
+</div>
+<div class="absolute bottom-8 right-8 z-20 opacity-0 group-hover:opacity-100 transition-opacity translate-x-4 group-hover:translate-x-0">
+<span class="material-symbols-outlined text-4xl text-white">open_in_new</span>
+</div>
+</div>
+</div>
+<section class="mt-32 border-t-4 border-electric-blue pt-16" id="experience">
+<div class="flex flex-col md:flex-row justify-between mb-16 gap-8">
+<h2 class="text-7xl font-bold uppercase tracking-tighter leading-[0.9]">Professional<br/><span class="text-electric-blue font-mono text-4xl tracking-normal">// JOURNEY</span></h2>
+<div class="max-w-md">
+<p class="text-gray-400 font-medium text-lg leading-relaxed">
+                    A track record of engineering excellence, from refactoring legacy ERP systems to building scalable Shopify apps and responsive business dashboards.
+                </p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="group relative bg-zinc-900 border-2 border-white/5 hover:border-electric-blue transition-all duration-500 overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between p-8">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-electric-blue font-mono font-bold text-xl">2024—PRES</span>
+<div>
+<h4 class="text-3xl font-bold uppercase tracking-tighter">Software Developer</h4>
+<p class="text-sm font-mono text-gray-500 mt-1">Ethgen Technologies — Calicut, Kerala</p>
+</div>
+</div>
+<div class="mt-6 md:mt-0">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-45 transition-transform duration-500">add</span>
+</div>
+</div>
+<div class="max-h-0 group-hover:max-h-screen transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+<div class="px-8 pb-8 pt-0 border-t border-white/10 mt-4">
+<ul class="mt-6 space-y-4 text-gray-400 font-medium">
+<li class="flex gap-4"><span class="text-electric-blue font-mono">01.</span> Led refactoring of large-scale ERP systems with legacy codebases into modular React + TypeScript architectures.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">02.</span> Architected responsive business dashboards improving operational friction for internal teams by 40%.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">03.</span> Integrated Supabase for real-time authentication, role-based access control, and secure file storage.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="group relative bg-zinc-900 border-2 border-white/5 hover:border-electric-blue transition-all duration-500 overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between p-8">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-electric-blue font-mono font-bold text-xl">2021—2024</span>
+<div>
+<h4 class="text-3xl font-bold uppercase tracking-tighter">Software Developer</h4>
+<p class="text-sm font-mono text-gray-500 mt-1">Acodez IT Solutions — Calicut, Kerala</p>
+</div>
+</div>
+<div class="mt-6 md:mt-0">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-45 transition-transform duration-500">add</span>
+</div>
+</div>
+<div class="max-h-0 group-hover:max-h-screen transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+<div class="px-8 pb-8 pt-0 border-t border-white/10 mt-4">
+<ul class="mt-6 space-y-4 text-gray-400 font-medium">
+<li class="flex gap-4"><span class="text-electric-blue font-mono">01.</span> Developed production-ready Shopify applications including Product Labels &amp; Badges app serving multiple merchants.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">02.</span> Mentored and trained junior developers through structured code reviews and technical documentation.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">03.</span> Modernized legacy codebases resulting in improved performance, stability, and reduced technical debt.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="group relative bg-zinc-900 border-2 border-white/5 hover:border-electric-blue transition-all duration-500 overflow-hidden">
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between p-8">
+<div class="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+<span class="text-electric-blue font-mono font-bold text-xl">2019—2020</span>
+<div>
+<h4 class="text-3xl font-bold uppercase tracking-tighter">Dev Intern</h4>
+<p class="text-sm font-mono text-gray-500 mt-1">Maxlore Innovations — Calicut, Kerala</p>
+</div>
+</div>
+<div class="mt-6 md:mt-0">
+<span class="material-symbols-outlined text-4xl transform group-hover:rotate-45 transition-transform duration-500">add</span>
+</div>
+</div>
+<div class="max-h-0 group-hover:max-h-screen transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+<div class="px-8 pb-8 pt-0 border-t border-white/10 mt-4">
+<ul class="mt-6 space-y-4 text-gray-400 font-medium">
+<li class="flex gap-4"><span class="text-electric-blue font-mono">01.</span> Developed responsive, cross-browser compatible frontend interfaces using HTML5, CSS3, and jQuery.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">02.</span> Implemented modern UI/UX improvements focusing on accessibility and visual consistency.</li>
+<li class="flex gap-4"><span class="text-electric-blue font-mono">03.</span> Optimized relational database schemas using Django ORM for hotel inventory systems.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="mt-40 mb-12 text-center border-t border-white/10 pt-32" id="contact">
+<h2 class="text-[clamp(3rem,18vw,15rem)] font-bold tracking-tighter leading-[0.7] uppercase mb-16">
+            LET'S <span class="text-electric-blue italic">BUILD</span> IT
+        </h2>
+<div class="flex flex-col items-center gap-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl font-mono">
+<a class="p-8 border-2 border-white/10 hover:border-electric-blue transition-all group" href="mailto:midkallanoor@gmail.com">
+<span class="block text-[10px] text-gray-500 mb-2">EMAIL_ADDRESS</span>
+<span class="text-lg font-bold">midkallanoor@gmail.com</span>
+</a>
+<a class="p-8 border-2 border-white/10 hover:border-electric-blue transition-all group" href="#">
+<span class="block text-[10px] text-gray-500 mb-2">GITHUB_REPOS</span>
+<span class="text-lg font-bold">/midhun-k</span>
+</a>
+<a class="p-8 border-2 border-white/10 hover:border-electric-blue transition-all group" href="#">
+<span class="block text-[10px] text-gray-500 mb-2">LINKEDIN_URI</span>
+<span class="text-lg font-bold">/in/midhun-k</span>
+</a>
+</div>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.4em] opacity-40">
+<span>React</span>
+<span>Node.js</span>
+<span>TypeScript</span>
+<span>Next.js</span>
+<span>AWS</span>
+<span>Docker</span>
+</div>
+</div>
+<div class="mt-40 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-600 uppercase tracking-[0.3em] font-mono border-t border-white/5 pt-8">
+<p>© 2024 MIDHUN K // SENIOR ENGINEER // BUILD_HASH: 7f2a1b9</p>
+<p class="mt-4 md:mt-0">DESIGNED TO DISRUPT // 11.2588° N, 75.7804° E</p>
+</div>
+</footer>
+</main>
+<button class="fixed bottom-8 right-8 size-16 bg-electric-blue border-2 border-white flex items-center justify-center text-white shadow-[0_0_40px_rgba(46,49,255,0.4)] hover:scale-110 transition-transform active:scale-95 z-50">
+<span class="material-symbols-outlined text-3xl">code_blocks</span>
+</button>
+
+</body></html>
