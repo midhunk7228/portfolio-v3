@@ -5,7 +5,7 @@ function Experience() {
     {
       period: '2024—PRES',
       title: 'Software Developer',
-      company: 'Ethgen Technologies — Calicut, Kerala',
+      company: 'Exthgen Technologies — Calicut, Kerala',
       achievements: [
         'Led refactoring of large-scale ERP systems with legacy codebases into modular React + TypeScript architectures.',
         'Architected responsive business dashboards improving operational friction for internal teams by 40%.',

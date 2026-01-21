@@ -53,7 +53,7 @@ function Skills() {
           </div>
           <div className="text-electric-blue">&gt; ls /experience</div>
           <div className="text-white">
-            - Ethgen_Technologies<br/>
+            - Exthgen_Technologies<br/>
             - Acodez_IT_Solutions<br/>
             - Maxlore_Innovations
           </div>
